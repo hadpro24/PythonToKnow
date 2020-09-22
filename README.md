@@ -212,7 +212,7 @@ item.. 9
 for no break...
 ```
 
-A savoir, la reference d'une liste passer en paramettre est global
+A savoir, en python les paramettres d'une fonction sont crees (une seul fois) lors de la declaration de la fonction pas lors de l'appel.
 ```python
 >> def add_food(food, menu=[]):
 ...   menu.append(food)
@@ -223,7 +223,6 @@ A savoir, la reference d'une liste passer en paramettre est global
 >> add_food('egg') #python utilise la meme reference
 ['spam', 'egg']
 ```
-NB : consequence: les paramettres d'une fonction sont creer (une seul fois) lors de la declaration de la fonction pas lors du l'appel.
 
 
 # Credit
