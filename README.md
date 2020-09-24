@@ -1,15 +1,15 @@
 # PythonToKnow
-On peut en chaine des comparaions
+On peut enchaîner des comparaisons
 ```python
 >> 1 < 2 < 3
 True
 >> 1 < 3 < 2
 False
 ```
-L'affectation d'une liste est une copy de reference pas de valeur
+L'affectation d'une liste est une copie de référence pas de valeur
 ```python
 >> a = [1, 2, 3, 4]
->> b = a #copy de reference
+>> b = a #copie de reference
 >> b
 [1, 2, 3, 4]
 >> a
@@ -17,11 +17,11 @@ L'affectation d'une liste est une copy de reference pas de valeur
 >> b[0] = 9
 >> b
 [9, 2, 3, 4]
->> a #a prends la meme valeur
+>> a #a prends la même valeur
 [9, 2, 3, 4]
 ```
 
-Utiliser is pour la comparation avec ```None``` et == pour le reste
+Utiliser ```is``` pour la comparaison avec ```None``` et == pour le reste
 ```python
 >> a = None
 >> b = [1, 3, 4]
@@ -31,23 +31,23 @@ True
 True
 ```
 
-La selection d'une liste peut s'effectuer de deux maniere et on peut preciser un pas de selection
+La sélection d'une liste peut s'effectuer de deux manières différentes et on peut préciser un pas de selection
 ```python
 >> a = [1, 2, 3, 4, 6, 7]
->> a[0:4] # equivaut a a[:4]
+>> a[0:4] # équivaut a a[:4]
 [1, 2, 3, 4]
->> a[-4:-1] # de -4 a -1 (-1 exclut)
+>> a[-4:-1] # de -4 a -1 (-1 exclus)
 [3, 4, 6]
 >> a[1:7:2] # par pas de 2: a[debut:fin-1:pas]
 [2, 4, 7]
->> a[:] #selection de toute la liste (du debut a la fin)
+>> a[:] #sélection de toute la liste (du debut a la fin)
 [1, 2, 3, 4, 6, 7]
 ```
 
-pour une copie de liste avec des references differente: faites
+Pour une copie de liste avec des références différentes: faites
 ```python
 >> a = [1, 2, 3, 4]
->> b = a[:] #copy de surface ou shallow copy
+>> b = a[:] #copie de surface ou shallow copy
 >> b
 [1, 2, 3, 4]
 >> a
@@ -70,7 +70,7 @@ pour une copie de liste avec des references differente: faites
 >> a #a ne change pas
 [1, 2, [3, 4]]
 ```
-Pour declarer un tuple d'un element
+Pour déclarer un tuple d'un élément 
 ```python
 >> a = (1,) #ou 1,
 >> a
@@ -91,7 +91,7 @@ Unpacking tuple
 [2,3]
 ```
 
-Les cles de disctionnaire doit etre immuable
+Les clés de dictionnaire doivent être immuables
 ```python
 >> mydict = {[1,2,3]:'a', 'b': 1}
 Traceback (most recent call last):
@@ -102,7 +102,7 @@ TypeError: unhashable type: 'list'
 {(1, 2, 3): 'a', 'b': 1}
 ```
 
-Avec in on peut verifier la presence d'une cle dans un dictionnaire
+Avec ```in``` on peut vérifier la présence d'une clé dans un dictionnaire
 ```python
 >> mydict = {'a':1, 'b':2, 'c':3}
 >> 'a' in mydict
@@ -111,7 +111,7 @@ True
 False
 ```
 
-On peut faire une insertion si une cle exist dans un dictionnaire
+On peut faire une insertion si une clé existe dans un dictionnaire
 ```python
 >> mydict = {'a':1, 'b':2, 'c':3}
 >> mydict.setdefault('z', 100)
@@ -124,7 +124,7 @@ On peut faire une insertion si une cle exist dans un dictionnaire
 {'a': 1, 'b': 2, 'c': 3}
 >>
 ```
-L'element d'un set doit etre immuable
+L'élément d'un set doit etre immuable
 ```python
 >> myset = {[1], 1}
 Traceback (most recent call last):
@@ -135,7 +135,7 @@ TypeError: unhashable type: 'list'
 {1, (1,)}
 ```
 
-On peut ajouter un element dans un set avec `add`
+On peut ajouter un élément dans un set avec `add`
 ```python
 >> myset = {1,2,5}
 >> myset.add(8)
@@ -143,13 +143,13 @@ On peut ajouter un element dans un set avec `add`
 {1,2,5, 8}
 ```
 
-lamda peut prends plusieurs paramettre
+```lambda``` peut prendre plusieurs paramètres
 ```python
 >> (lambda x,y:x*2+y*2)(2,3)
 10
 ```
 
-une condition peut se tenir sur une ligne
+Une condition peut se tenir sur une ligne
 ```python
 >> if True: print('yes')
 ...
@@ -160,14 +160,14 @@ une condition peut se tenir sur une ligne
 'no'
 ```
 
-On peut enchener plusieurs instructions
+On peut enchaîner plusieurs instructions
 ```python
 >> if True: print('yes 1'); print('yes 2')
 ...
 'yes 1'
 'yes 2'
 ```
-NB : Mais il ne faut pas en abuser, plus de 3 utiliser la condition claissque
+NB : Mais il ne faut pas en abuser. Plus de 3, utiliser la condition classique
 
 Ternaire en python
 ```python
@@ -212,7 +212,7 @@ item.. 9
 for no break...
 ```
 
-A savoir, en python les paramettres d'une fonction sont crees (une seul fois) lors de la declaration de la fonction pas lors de l'appel.
+A savoir, en python les paramètres d'une fonction sont créées (une seul fois) lors de la declaration de la fonction pas lors de l'appel.
 ```python
 >> def add_food(food, menu=[]):
 ...   menu.append(food)
